@@ -104,7 +104,7 @@ function Navbar({
               className={`font-['Gully',sans-serif] text-[15px] transition-colors ${
                 currentPage === link.page
                   ? "text-[#f0f0f0] font-medium"
-                  : "text-[#F0F0F0] hover:text-[#081974]"
+                  : "text-[#F0F0F0] hover:text-[#9faffc]"
               } ${scrolled ? "text-black" : "text-white"} `}
             >
               {link.label}
@@ -117,7 +117,7 @@ function Navbar({
           <div className="relative">
             <button
               onClick={() => setLangOpen(!langOpen)}
-              className="flex items-center gap-1 font-['Gully',sans-serif] text-[15px] text-[#f0f0f0] hover:text-[#081974] transition-colors h-[40px] px-2 rounded-[8px] hover:bg-[rgba(0,82,158,0.05)]"
+              className="flex items-center gap-1 font-['Gully',sans-serif] text-[15px] text-[#f0f0f0] hover:text-[#9faffc] transition-colors h-[40px] px-2 rounded-[8px] hover:bg-[rgba(0,82,158,0.05)]"
             >
               <Globe size={15} className="text-[#f0f0f0] " />
               <span>{activeLang}</span>
@@ -140,14 +140,14 @@ function Navbar({
 
           <button
             onClick={() => onNavigate("bookDemo")}
-            className="flex items-center gap-1.5 font-['Gully',sans-serif] text-[15px] text-[#f0f0f0] hover:text-[#081974] transition-colors"
+            className="flex items-center gap-1.5 font-['Gully',sans-serif] text-[15px] text-[#f0f0f0] hover:text-[#9faffc] transition-colors"
           >
             Book a demo
             <ArrowUpRight size={16} />
           </button>
           <button
             onClick={() => onNavigate("getStarted")}
-            className="bg-[#081974] text-white font-['Gully',sans-serif] font-medium text-[15px] px-5 h-[40px] rounded-[8px] whitespace-nowrap hover:bg-[#061560] transition-colors"
+            className="bg-[#081974] text-white font-['Gully',sans-serif] font-medium text-[15px] px-5 h-[40px] rounded-[8px] whitespace-nowrap hover:bg-[#1539eb] transition-colors"
           >
             Get Started
           </button>
@@ -448,13 +448,13 @@ function LandingPage({ onNavigate }: { onNavigate: (p: Page) => void }) {
   ];
 
   const schoolLogos = [
-    { name: "Akwa Ibom State University", img: '/imports/AcademaWebsiteLandingPage-1/45b882fd5efd56c08798d842f61cdc0e55078e01.png' },
-    { name: "University of Uyo", img: "../imports/AcademaWebsiteLandingPage-1/61c79eaaac5b3655d37ef84a18ec3719e44a617d.png" },
-    { name: "Ibom Metropolitan Polytechnic", img: "../imports/AcademaWebsiteLandingPage-1/782a2f8a6693eaa523cc499bb0b7912d17b51d9e.png" },
-    { name: "Hybrid Preparatory Schools", img: "../imports/AcademaWebsiteLandingPage-1/7125fa1abf025dad960f901709a1fc9b35b94671.png" },
-    { name: "Karmel Group of Schools", img: "../imports/AcademaWebsiteLandingPage-1/5c2c8f9c2c227cfaf8d45b03663b51d050618c84.png" },
-    { name: "Life College of Education", img: "../imports/AcademaWebsiteLandingPage-1/782a2f8a6693eaa523cc499bb0b7912d17b51d9e.png" },
-    { name: "Abia State College of Education", img: "../imports/AcademaWebsiteLandingPage-1/8eeedd5444eed79093a681cd970ad4f4fe64b5dc.png" },
+    { name: "Akwa Ibom State University", img: '/imports/AcademaWebsiteLandingPage-1/aksu-logo.png' },
+    { name: "University of Uyo", img: "../imports/AcademaWebsiteLandingPage-1/uniuyo-logo.png" },
+    { name: "Ibom Metropolitan Polytechnic", img: "../imports/AcademaWebsiteLandingPage-1/impoly-logo.png" },
+    { name: "Hybrid Preparatory Schools", img: "../imports/AcademaWebsiteLandingPage-1/hybrid-logo.png" },
+    { name: "Karmel Group of Schools", img: "../imports/AcademaWebsiteLandingPage-1/kamel-logo.png" },
+    { name: "Life College of Education", img: "../imports/AcademaWebsiteLandingPage-1/lifecollege-logo.png" },
+    { name: "Abia State College of Education", img: "../imports/AcademaWebsiteLandingPage-1/abiastate-logo.png" },
   ];
 
   return (
@@ -511,10 +511,14 @@ function LandingPage({ onNavigate }: { onNavigate: (p: Page) => void }) {
           <div className="mt-[60px] w-full max-w-[1260px] flex justify-center">
             <div className="relative w-full rounded-[40px] overflow-hidden" style={{ background: "rgba(217,217,217,0.2)" }}>
               <div className="mx-[27px] my-[24px] rounded-[24px] overflow-hidden">
-                <ImageWithFallback
-                  src={"../imports/Frame1618872716/40cb9501ac2b00ede205bd17073ce4845de646f5.png"}
-                  alt="Academa platform dashboard"
+                <video
+                  src="/imports/AcademaWebsiteLandingPage-1/Software_application_product__1080p.mp4"
+                  aria-label="Academa platform dashboard"
                   className="w-full h-auto block"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
                 />
               </div>
             </div>
@@ -1644,7 +1648,7 @@ function GetStartedPage({ onNavigate }: { onNavigate: (p: Page) => void }) {
     <div className="min-h-screen bg-[#f2f8f8] font-['Gully',sans-serif] pt-[72px]">
       <div className="max-w-[860px] mx-auto px-8 py-20">
         <div className="mb-10">
-          <button onClick={() => onNavigate("home")} className="flex items-center gap-1.5 text-[#3a3a3a] text-[14px] hover:text-[#081974] transition-colors mb-6">
+          <button onClick={() => onNavigate("home")} className="flex items-center gap-1.5 text-[#3a3a3a] text-[14px] hover:text-[#9faffc] transition-colors mb-6">
             <ChevronRight size={14} className="rotate-180" /> Back to home
           </button>
           <span className="inline-flex bg-[rgba(0,82,158,0.16)] text-[#081974] text-[13px] px-4 py-1.5 rounded-[6px] mb-4">Get Started</span>
