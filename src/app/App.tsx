@@ -605,7 +605,7 @@ function LandingPage({ onNavigate }: { onNavigate: (p: Page) => void }) {
       </section>
 
       {/* Testimonials */}
-      <section className="bg-white py-20">
+      {/* <section className="bg-white py-20">
         <div className="max-w-[1260px] mx-auto px-8">
           <div className="mb-12">
             <span className="inline-flex bg-[rgba(0,82,158,0.16)] text-[#081974] text-[14px] px-[10px] py-[10px] rounded-[8px] leading-[1.14]">What Schools Are Saying</span>
@@ -634,7 +634,7 @@ function LandingPage({ onNavigate }: { onNavigate: (p: Page) => void }) {
             ))}
           </div>
 
-          {/* Logos row */}
+          // Logos row 
           <div className="mt-12 flex items-center justify-center gap-8 flex-wrap opacity-50">
             {schoolLogos.slice(0, 5).map((s) => (
               <div key={s.name} className="w-8 h-8 rounded-full overflow-hidden">
@@ -644,7 +644,7 @@ function LandingPage({ onNavigate }: { onNavigate: (p: Page) => void }) {
             <span className="text-[13px] text-[#000419] font-medium">Trusted across many schools</span>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* 3 Steps */}
       <section data-nav-invert="true" className="bg-[#060e21] py-[82px] relative overflow-hidden">
